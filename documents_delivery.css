@@ -43,7 +43,7 @@
 }
 
 .document-hero h1 {
-    font-size: 3.5rem;
+    font-size: 2.2rem;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
@@ -100,7 +100,7 @@
 }
 
 .stat h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 8px;
     font-weight: 700;
     position: relative;
@@ -691,7 +691,8 @@
     background: var(--white);
     border: 2px solid var(--light-gray);
     border-radius: var(--radius);
-    padding: 25px;
+        padding: 2.3px;
+    /* padding: 25px; */
     transition: var(--transition);
     cursor: pointer;
     position: relative;

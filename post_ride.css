@@ -51,7 +51,7 @@
 .step-number {
     width: 40px;
     height: 40px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(53, 47, 47, 0.2);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -61,7 +61,7 @@
 }
 
 .step.active .step-number {
-    background: #4CAF50;
+    background: #236b53;
     color: white;
 }
 
@@ -122,7 +122,7 @@
 }
 
 .form-group label i {
-    color: #4CAF50;
+    color: #156349;
 }
 
 /* Input Styles */
@@ -138,8 +138,8 @@ input, select, textarea {
 
 input:focus, select:focus, textarea:focus {
     outline: none;
-    border-color: #4CAF50;
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    border-color: #156349;
+    box-shadow: 0 0 0 3px rgba(21, 99, 73, 0.1);
 }
 
 textarea {
@@ -163,7 +163,7 @@ textarea {
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    background: #4CAF50;
+    background: #156349;
     color: white;
     border: none;
     border-radius: 5px;
@@ -202,12 +202,12 @@ textarea {
 }
 
 .service-option input[type="checkbox"]:checked + label {
-    border-color: #4CAF50;
+    border-color: #156349;
     background: #f0f8ff;
 }
 
 .service-option input[type="checkbox"]:checked + label .service-icon {
-    background: #4CAF50;
+    background: #156349;
     color: white;
 }
 
@@ -253,7 +253,7 @@ textarea {
 }
 
 .price-card:hover {
-    border-color: #4CAF50;
+    border-color: #156349;
     transform: translateY(-2px);
 }
 
@@ -322,7 +322,7 @@ textarea {
 }
 
 .payment-option input[type="radio"]:checked + label {
-    border-color: #4CAF50;
+    border-color: #156349;
     background: #f0f8ff;
 }
 
@@ -341,7 +341,7 @@ textarea {
 }
 
 .payment-option input[type="radio"]:checked + label i {
-    color: #4CAF50;
+    color: #156349;
 }
 
 .payment-option span {
@@ -422,7 +422,7 @@ textarea {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: #4CAF50;
+    color: #156349;
 }
 
 .modal-body {
@@ -459,7 +459,7 @@ textarea {
     padding: 0.75rem;
     background: white;
     border-radius: 5px;
-    border-left: 4px solid #4CAF50;
+    border-left: 4px solid #156349;
 }
 
 .preview-item strong {

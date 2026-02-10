@@ -48,6 +48,9 @@ body {
     color: var(--text-dark);
 }
 
+.green-white {
+    color: var(--pure-white);
+}
 /* Button Styles */
 .btn {
     display: inline-flex;

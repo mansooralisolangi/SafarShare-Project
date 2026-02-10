@@ -305,12 +305,12 @@ function calculatePrice() {
     const totalPrice = subtotal + platformFee;
     
     // Update the UI
-    document.getElementById('baseCharge').textContent = `₹ ${baseCharge}`;
-    document.getElementById('securityCharge').textContent = `₹ ${securityCharge}`;
-    document.getElementById('expressCharge').textContent = `₹ ${expressCharge}`;
-    document.getElementById('trackingCharge').textContent = `₹ ${trackingCharge}`;
-    document.getElementById('platformFee').textContent = `₹ ${platformFee}`;
-    document.getElementById('totalPrice').textContent = `₹ ${totalPrice}`;
+    document.getElementById('baseCharge').textContent = `pkr ${baseCharge}`;
+    document.getElementById('securityCharge').textContent = `pkr ${securityCharge}`;
+    document.getElementById('expressCharge').textContent = `pkr ${expressCharge}`;
+    document.getElementById('trackingCharge').textContent = `pkr ${trackingCharge}`;
+    document.getElementById('platformFee').textContent = `pkr ${platformFee}`;
+    document.getElementById('totalPrice').textContent = `pkr ${totalPrice}`;
     
     // Calculate savings (assuming professional courier is 60% more expensive)
     const courierPrice = Math.round(totalPrice * 1.6);
@@ -318,7 +318,7 @@ function calculatePrice() {
     
     const savingsBadge = document.querySelector('.savings-badge strong');
     if (savingsBadge) {
-        savingsBadge.textContent = `₹ ${savings}`;
+        savingsBadge.textContent = `pkr ${savings}`;
     }
     
     return totalPrice;
@@ -565,7 +565,7 @@ function createCarrierCard(carrier) {
         
         <div class="carrier-action">
             <div>
-                <span class="carrier-price">₹ ${carrier.price}</span>
+                <span class="carrier-price">pkr ${carrier.price}</span>
                 <small>service charge</small>
             </div>
             <button class="btn btn-outline select-carrier" data-id="${carrier.id}">
