@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SafarShare</title>
+    <link rel="stylesheet" href="main_login_reg.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Notification System -->
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle notification-icon"></i>
+        <div class="notification-content">
+            <h4 class="notification-title">Success!</h4>
+            <p class="notification-message" id="notificationMessage">Operation completed successfully</p>
+        </div>
+        <button class="notification-close" id="notificationClose">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p class="loading-text" id="loadingText">Processing...</p>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="auth-container">
+        <!-- Left Hero Section -->
+        <div class="auth-hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="brand-logo">
+                    <i class="fas fa-car logo-icon"></i>
+                    <div class="brand-name">Safar<span>Share</span></div>
+                </div>
+                
+                <h1>Welcome Back!</h1>
+                <p>Login to continue your journey with SafarShare. Access your rides, manage bookings, and connect with fellow travelers.</p>
+                
+                <div class="features-list">
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="feature-text">Secure & Verified Users Only</div>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="feature-text">Eco-Friendly Carpooling</div>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="feature-text">Quick & Easy Booking</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Form Section -->
+        <div class="auth-form-section">
+            <!-- Back Button -->
+            <a href="index.html" class="back-to-home">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+
+            <!-- Form Header -->
+            <div class="form-header">
+                <h2>Login to Your Account</h2>
+                <p>Enter your credentials to access your SafarShare account</p>
+            </div>
+
+            <!-- Login Form -->
+            <form class="auth-form" id="loginForm">
+                <!-- Email Input -->
+                <div class="input-group">
+                    <label for="loginEmail">Email Address</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-envelope input-icon"></i>
+                        <input type="email" id="loginEmail" class="auth-input" placeholder="Enter your email" required>
+                    </div>
+                </div>
+
+                <!-- Password Input -->
+                <div class="input-group">
+                    <label for="loginPassword">Password</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock input-icon"></i>
+                        <input type="password" id="loginPassword" class="auth-input" placeholder="Enter your password" required>
+                        <button type="button" class="password-toggle" id="toggleLoginPassword">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="password-strength">
+                        <div class="strength-bar">
+                            <div class="strength-fill" id="loginStrength"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Remember Me & Forgot Password -->
+                <div class="form-options">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="rememberMe">
+                        <span class="checkmark"></span>
+                        <span class="checkbox-text">Remember me</span>
+                    </label>
+                    <a href="forgot-password.html" class="forgot-link">Forgot Password?</a>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn" id="loginBtn">
+                    <span class="btn-text">Login Now</span>
+                    <i class="fas fa-sign-in-alt btn-icon"></i>
+                </button>
+
+                <!-- Divider -->
+                <div class="divider">
+                    <span class="divider-text">Or continue with</span>
+                </div>
+
+                <!-- Social Login -->
+                <div class="social-login">
+                    <a href="#" class="social-btn google">
+                        <i class="fab fa-google social-icon"></i>
+                        Google
+                    </a>
+                    <a href="#" class="social-btn github">
+                        <i class="fab fa-github social-icon"></i>
+                        GitHub
+                    </a>
+                    <a href="#" class="social-btn facebook">
+                        <i class="fab fa-facebook social-icon"></i>
+                        Facebook
+                    </a>
+                </div>
+
+                <!-- Form Footer -->
+                <div class="form-footer">
+                    <p>Don't have an account? 
+                        <a href="register.html" class="toggle-link">
+                            <span>Create Account</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="main_login_regis.js"></script>
+    <script src="login-script.js"></script>
+</body>
+</html>

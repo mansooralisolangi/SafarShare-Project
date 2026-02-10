@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | SafarShare</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+   <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-car"></i>
+                <h1>Safar<span>Share</span></h1>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li class="nav-item dropdown">
+                    <a href="services.html" class="nav-link"><i class="fas fa-concierge-bell"></i> Our Services <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="parcel_delivery.html"><i class="fas fa-shipping-fast"></i> Parcel Delivery</a>
+                        <a href="documents_delivery.html"><i class="fas fa-file-contract"></i> Document Delivery</a>
+                        <a href="shopping_delivery.html"><i class="fas fa-shopping-bag"></i> Shopping Delivery</a>
+                        <a href="carpool.html"><i class="fas fa-people-carry"></i> Carpool</a>
+                        <a href="daily_commute.html"><i class="fas fa-calendar-day"></i> Daily Commute</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="about_us.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                <li class="nav-item"><a href="helps.html" class="nav-link"><i class="fas fa-question-circle"></i> Help</a></li>
+            </ul>
+
+            <div class="auth-buttons">
+    <a href="login_and_sign_in.html" id="headerLogin" class="btn btn-outline">
+        <i class="fas fa-sign-in-alt"></i> Login
+    </a>
+    <!-- <a href="#" id="headerRegister" class="btn btn-primary">
+        <i class="fas fa-user-plus"></i> Register
+    </a> -->
+</div>
+<!-- <div class="auth-buttons">
+    <button id="headerLogin" class="btn btn-outline">
+        <i class="fas fa-sign-in-alt"></i> Login
+    </button>
+    <button id="headerRegister" class="btn btn-primary">
+        <i class="fas fa-user-plus"></i> Register
+    </button>
+</div> -->
+
+            
+            <!-- <div class="auth-buttons">
+                <a href="login_page.html" class="btn btn-outline"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="register_page.html" class="btn btn-primary"><i class="fas fa-user-plus"></i> Register</a>
+            </div> -->
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h2>Contact Us</h2>
+                <p>Have questions or need assistance? We're here to help!</p>
+            </div>
+
+            <!-- Success Message (Hidden by default) -->
+            <div id="successMessage" class="success-message">
+                <i class="fas fa-check-circle"></i>
+                <span>Thank you! Your message has been submitted successfully.</span>
+                <button id="closeSuccess" class="close-btn">&times;</button>
+            </div>
+
+            <div class="content-wrapper">
+                <!-- Contact Form Section -->
+                <section class="contact-form-section">
+                    <h3><i class="fas fa-envelope"></i> Send us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" class="form-input" placeholder="Enter your full name">
+                            <div class="error-message" id="nameError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactInfo">Email or Phone Number *</label>
+                            <input type="text" id="contactInfo" class="form-input" placeholder="Enter email or phone number">
+                            <div class="error-message" id="contactError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" class="form-input">
+                                <option value="">Select a subject</option>
+                                <option value="General Query">General Query</option>
+                                <option value="Support">Support</option>
+                                <option value="Report Issue">Report Issue</option>
+                                <option value="Partnership">Partnership</option>
+                                <option value="Feedback">Feedback</option>
+                            </select>
+                            <div class="error-message" id="subjectError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" class="form-input textarea" rows="5" placeholder="Type your message here..."></textarea>
+                            <div class="error-message" id="messageError"></div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </section>
+
+                <!-- Contact Info Section -->
+                <section class="contact-info-section">
+                    <h3><i class="fas fa-info-circle"></i> Contact Information</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>support@safarshare.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+92 300 0000000</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Pakistan</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Response Time</h4>
+                                <p>Within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Demo Info Box -->
+                    <div class="demo-info">
+                        <h4><i class="fas fa-laptop-code"></i> Demo Note</h4>
+                        <p>This is a frontend demo. Submitted messages are stored locally in your browser's storage.</p>
+                        <button id="viewMessages" class="view-btn">
+                            <i class="fas fa-eye"></i> View Stored Messages
+                        </button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Stored Messages Modal -->
+            <div id="messagesModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3><i class="fas fa-inbox"></i> Messages in LocalStorage</h3>
+                        <button id="closeModal" class="close-btn">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="messagesList"></div>
+                        <div id="emptyMessage" class="empty-state">
+                            <i class="fas fa-inbox"></i>
+                            <p>No messages stored yet.</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="clearMessages" class="clear-btn">
+                            <i class="fas fa-trash"></i> Clear All Messages
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+     <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="logo">
+                    <i class="fas fa-car"></i>
+                    <h2>Safar<span>Share</span></h2>
+                </div>
+                <p>Connecting people traveling the same route, reducing expenses, and saving the environment.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="help.html">Help</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Carpool</a></li>
+                    <li><a href="#">Parcel Delivery</a></li>
+                    <li><a href="#">Document Delivery</a></li>
+                    <li><a href="#">Shopping Delivery</a></li>
+                    <li><a href="#">Daily Commute</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</li>
+                    <li><i class="fas fa-phone"></i> +92 3225844067</li>
+                    <li><i class="fas fa-envelope"></i> info@safarshare.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 SafarShare. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a> | 
+                <a href="#">Terms of Use</a> | 
+                <a href="#">Cookies Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>

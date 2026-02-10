@@ -1,0 +1,517 @@
+/* Post Your Journey Page Specific Styles */
+
+/* Page Header */
+.page-header {
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+
+    /* background: linear-gradient(135deg, #2c3e50, #4a6491); */
+    /* background-color: #4CAF50; */
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+/* Progress Steps */
+.progress-steps {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.step.active {
+    opacity: 1;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.step.active .step-number {
+    background: #4CAF50;
+    color: white;
+}
+
+.step span {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Journey Form */
+.journey-form {
+    padding: 3rem 0;
+    background: #f8f9fa;
+}
+
+.form-section {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.5rem;
+}
+
+.section-description {
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* Form Grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.form-group label i {
+    color: #4CAF50;
+}
+
+/* Input Styles */
+input, select, textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: 'Nunito', sans-serif;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Route Inputs */
+.route-inputs {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.icon-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.icon-btn:hover {
+    background: #4CAF50;
+}
+
+/* Services Checkboxes */
+.services-checkboxes {
+    display: grid;
+    gap: 1rem;
+}
+
+.service-option {
+    position: relative;
+}
+
+.service-option input[type="checkbox"] {
+    display: none;
+}
+
+.service-option label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.service-option input[type="checkbox"]:checked + label {
+    border-color: #4CAF50;
+    background: #f0f8ff;
+}
+
+.service-option input[type="checkbox"]:checked + label .service-icon {
+    background: #4CAF50;
+    color: white;
+}
+
+.service-icon {
+    width: 50px;
+    height: 50px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    transition: all 0.3s ease;
+}
+
+.service-details h3 {
+    margin: 0 0 0.25rem 0;
+    color: var(--dark-color);
+    font-size: 1.1rem;
+}
+
+.service-details p {
+    margin: 0;
+    color: var(--dark-color);
+    font-size: 0.9rem;
+}
+
+/* Pricing Grid */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.price-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 1.5rem;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.price-card:hover {
+    border-color: #4CAF50;
+    transform: translateY(-2px);
+}
+
+.price-card h3 {
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.price-input {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.currency {
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+.price-input input {
+    flex: 1;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+.unit {
+    color: var(--dark-color);
+    font-size: 0.9rem;
+}
+
+.price-note {
+    color: var(--dark-color);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+/* Payment Options */
+.payment-options {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.payment-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 100px;
+}
+
+.payment-option input[type="radio"] {
+    display: none;
+}
+
+.payment-option input[type="radio"]:checked + label {
+    border-color: #4CAF50;
+    background: #f0f8ff;
+}
+
+.payment-option label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.payment-option i {
+    font-size: 1.5rem;
+    color: var(--dark-color);
+}
+
+.payment-option input[type="radio"]:checked + label i {
+    color: #4CAF50;
+}
+
+.payment-option span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Preview Modal */
+.preview-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.preview-modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: modalSlide 0.3s ease;
+}
+
+@keyframes modalSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.modal-header h2 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #4CAF50;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.preview-content {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.preview-section {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.preview-section h3 {
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.preview-details {
+    display: grid;
+    gap: 1rem;
+}
+
+.preview-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem;
+    background: white;
+    border-radius: 5px;
+    border-left: 4px solid #4CAF50;
+}
+
+.preview-item strong {
+    color: var(--dark-color);
+}
+
+.preview-item span {
+    color: var(--dark-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .progress-steps {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .payment-options {
+        flex-direction: column;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .modal-content {
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-section {
+        padding: 1.5rem;
+    }
+    
+    .service-option label {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .service-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpool/Ride Sharing - SafarShare</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="carpool.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-car"></i>
+                <h1>Safar<span>Share</span></h1>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li class="nav-item dropdown">
+                    <a href="services.html" class="nav-link"><i class="fas fa-concierge-bell"></i> Our Services <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="parcel_delivery.html"><i class="fas fa-shipping-fast"></i> Parcel Delivery</a>
+                        <a href="documents_delivery.html"><i class="fas fa-file-contract"></i> Document Delivery</a>
+                        <a href="shopping_delivery.html"><i class="fas fa-shopping-bag"></i> Shopping Delivery</a>
+                        <a href="carpool.html"><i class="fas fa-people-carry"></i> Carpool</a>
+                        <a href="daily_commute.html"><i class="fas fa-calendar-day"></i> Daily Commute</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="about_us.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                <li class="nav-item"><a href="helps.html" class="nav-link"><i class="fas fa-question-circle"></i> Help</a></li>
+            </ul>
+
+            <div class="auth-buttons">
+    <a href="login_and_sign_in.html" id="headerLogin" class="btn btn-outline">
+        <i class="fas fa-sign-in-alt"></i> Login
+    </a>
+    <!-- <a href="#" id="headerRegister" class="btn btn-primary">
+        <i class="fas fa-user-plus"></i> Register
+    </a> -->
+</div>
+<!-- <div class="auth-buttons">
+    <button id="headerLogin" class="btn btn-outline">
+        <i class="fas fa-sign-in-alt"></i> Login
+    </button>
+    <button id="headerRegister" class="btn btn-primary">
+        <i class="fas fa-user-plus"></i> Register
+    </button>
+</div> -->
+
+            
+            <!-- <div class="auth-buttons">
+                <a href="login_page.html" class="btn btn-outline"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="register_page.html" class="btn btn-primary"><i class="fas fa-user-plus"></i> Register</a>
+            </div> -->
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Service Hero Section -->
+    <section class="service-hero">
+        <div class="container">
+            <div class="service-hero-content">
+                <div class="service-badge">
+                    <i class="fas fa-people-carry"></i>
+                    <span>Carpool Service</span>
+                </div>
+                <h1>Share Rides, Split Costs</h1>
+                <p class="subtitle">Connect with fellow travelers going your way. Save up to 70% on travel costs while making new connections.</p>
+                <div class="service-stats">
+                    <div class="stat">
+                        <h3>10,000+</h3>
+                        <p>Successful Rides</p>
+                    </div>
+                    <div class="stat">
+                        <h3>PKR 50M+</h3>
+                        <p>Saved by Users</p>
+                    </div>
+                    <div class="stat">
+                        <h3>4.8★</h3>
+                        <p>User Rating</p>
+                    </div>
+                </div>
+                <div class="service-actions">
+                    <a href="../pages/find-ride.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-search"></i> Find a Ride
+                    </a>
+                    <a href="../pages/post-ride.html" class="btn btn-secondary btn-large">
+                        <i class="fas fa-road"></i> Post a Ride
+                    </a>
+                </div>
+            </div>
+            <div class="service-hero-image">
+                <img src="../images/carpool-hero.png" alt="Carpool Service">
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details -->
+    <section class="service-details">
+        <div class="container">
+            <div class="service-info">
+                <h2>What is Carpool/Ride Sharing?</h2>
+                <p>Carpooling, also known as ride-sharing, is when multiple people travel together in the same vehicle to a common or similar destination. With SafarShare, you can:</p>
+                
+                <div class="features-grid">
+                    <div class="feature">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <h3>Save Money</h3>
+                        <p>Split fuel, toll, and maintenance costs with fellow travelers</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Reduce Pollution</h3>
+                        <p>Fewer vehicles on the road means less carbon footprint</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-users"></i>
+                        <h3>Meet People</h3>
+                        <p>Connect with new people traveling the same route</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-clock"></i>
+                        <h3>Save Time</h3>
+                        <p>Use carpool lanes and reduce traffic congestion</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="service-process">
+        <div class="container">
+            <h2>How Carpool Works on SafarShare</h2>
+            
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>1. Create Account</h3>
+                        <p>Register as a driver or passenger with verified credentials</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>2. Post/Find Ride</h3>
+                        <p>Drivers post their route and available seats. Passengers search for rides</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>3. Connect & Confirm</h3>
+                        <p>Discuss details, agree on pickup points, and confirm the ride</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>4. Travel Together</h3>
+                        <p>Meet at the agreed location and travel together safely</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>5. Rate & Review</h3>
+                        <p>Share your experience and help build our trusted community</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="service-pricing">
+        <div class="container">
+            <h2>Cost Sharing Example</h2>
+            <div class="pricing-example">
+                <div class="cost-breakdown">
+                    <h3>Karachi to Islamabad</h3>
+                    <div class="cost-item">
+                        <span>Fuel Cost (One-way)</span>
+                        <span class="cost">PKR 10,000</span>
+                    </div>
+                    <div class="cost-item">
+                        <span>Tolls & Maintenance</span>
+                        <span class="cost">PKR 2,000</span>
+                    </div>
+                    <div class="cost-item total">
+                        <span>Total Cost (Alone)</span>
+                        <span class="cost">PKR 12,000</span>
+                    </div>
+                    
+                    <div class="cost-sharing">
+                        <h4>With Carpool (3 passengers):</h4>
+                        <div class="cost-item">
+                            <span>Cost per person</span>
+                            <span class="cost savings">PKR 4,000</span>
+                        </div>
+                        <div class="savings-highlight">
+                            <i class="fas fa-piggy-bank"></i>
+                            <span>Each saves <strong>PKR 8,000</strong></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pricing-notes">
+                    <h4><i class="fas fa-info-circle"></i> Important Notes:</h4>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Prices are negotiable between driver and passengers</li>
+                        <li><i class="fas fa-check"></i> SafarShare charges 10% service fee from drivers</li>
+                        <li><i class="fas fa-check"></i> Payment can be cash or digital (Easypaisa/JazzCash)</li>
+                        <li><i class="fas fa-check"></i> Women-only rides available for safety</li>
+                        <li><i class="fas fa-check"></i> Insurance coverage for all verified rides</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Features -->
+    <section class="service-safety">
+        <div class="container">
+            <h2>Your Safety is Our Priority</h2>
+            <div class="safety-features">
+                <div class="safety-card">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Verified Users</h3>
+                    <p>All users verified with CNIC and phone number</p>
+                </div>
+                <div class="safety-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Emergency Features</h3>
+                    <p>In-app emergency button and trip sharing</p>
+                </div>
+                <div class="safety-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Rating System</h3>
+                    <p>Rate drivers and passengers after each trip</p>
+                </div>
+                <div class="safety-card">
+                    <i class="fas fa-camera"></i>
+                    <h3>Trip Verification</h3>
+                    <p>Optional photo verification before pickup</p>
+                </div>
+                <div class="safety-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Customer support available round the clock</p>
+                </div>
+                <div class="safety-card">
+                    <i class="fas fa-car-crash"></i>
+                    <h3>Trip Insurance</h3>
+                    <p>Basic insurance coverage for all rides</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="service-faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How much does it cost to use SafarShare?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>SafarShare is free for passengers. Drivers pay a 10% service fee from their earnings. There are no registration or monthly fees.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I ensure my safety?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Always check user ratings, share trip details with family, use women-only rides if preferred, and verify driver/vehicle before getting in.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What if the driver cancels?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We'll immediately notify you and help find an alternative ride. Drivers with frequent cancellations are penalized.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I carpool daily for office?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Many users share daily commute rides. You can set up regular carpool arrangements with the same group.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="service-cta">
+        <div class="container">
+            <div class="cta-card">
+                <h2>Ready to Start Carpooling?</h2>
+                <p>Join thousands of Pakistanis who are saving money and making friends on the road.</p>
+                <div class="cta-buttons">
+                    <a href="../register.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-user-plus"></i> Sign Up Free
+                    </a>
+                    <a href="../pages/find-ride.html" class="btn btn-outline btn-large">
+                        <i class="fas fa-search"></i> Browse Rides
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+     <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="logo">
+                    <i class="fas fa-car"></i>
+                    <h2>Safar<span>Share</span></h2>
+                </div>
+                <p>Connecting people traveling the same route, reducing expenses, and saving the environment.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="help.html">Help</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Carpool</a></li>
+                    <li><a href="#">Parcel Delivery</a></li>
+                    <li><a href="#">Document Delivery</a></li>
+                    <li><a href="#">Shopping Delivery</a></li>
+                    <li><a href="#">Daily Commute</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</li>
+                    <li><i class="fas fa-phone"></i> +92 3225844067</li>
+                    <li><i class="fas fa-envelope"></i> info@safarshare.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 SafarShare. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a> | 
+                <a href="#">Terms of Use</a> | 
+                <a href="#">Cookies Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="carpool.js"></script>
+</body>
+</html>

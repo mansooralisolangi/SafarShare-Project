@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Ride | SafarShare</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="find_ride.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+ <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-car"></i>
+                <h1>Safar<span>Share</span></h1>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li class="nav-item dropdown">
+                    <a href="services.html" class="nav-link"><i class="fas fa-concierge-bell"></i> Our Services <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="parcel_delivery.html"><i class="fas fa-shipping-fast"></i> Parcel Delivery</a>
+                        <a href="documents_delivery.html"><i class="fas fa-file-contract"></i> Document Delivery</a>
+                        <a href="shopping_delivery.html"><i class="fas fa-shopping-bag"></i> Shopping Delivery</a>
+                        <a href="carpool.html"><i class="fas fa-people-carry"></i> Carpool</a>
+                        <a href="daily_commute.html"><i class="fas fa-calendar-day"></i> Daily Commute</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="about_us.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                <li class="nav-item"><a href="helps.html" class="nav-link"><i class="fas fa-question-circle"></i> Help</a></li>
+            </ul>
+
+            <div class="auth-buttons">
+    <a href="login_and_sign_in.html" id="headerLogin" class="btn btn-outline">
+        <i class="fas fa-sign-in-alt"></i> Login
+    </a>
+    <!-- <a href="#" id="headerRegister" class="btn btn-primary">
+        <i class="fas fa-user-plus"></i> Register
+    </a> -->
+</div>
+<!-- <div class="auth-buttons">
+    <button id="headerLogin" class="btn btn-outline">
+        <i class="fas fa-sign-in-alt"></i> Login
+    </button>
+    <button id="headerRegister" class="btn btn-primary">
+        <i class="fas fa-user-plus"></i> Register
+    </button>
+</div> -->
+
+            
+            <!-- <div class="auth-buttons">
+                <a href="login_page.html" class="btn btn-outline"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="register_page.html" class="btn btn-primary"><i class="fas fa-user-plus"></i> Register</a>
+            </div> -->
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <h1>Find Your Perfect Ride</h1>
+            <p class="subtitle">Search for available rides, carpool options, or delivery services</p>
+            
+            <div class="search-container">
+                <div class="search-tabs">
+                    <button class="tab-btn active" data-tab="ride">Find a Ride</button>
+                    <button class="tab-btn" data-tab="parcel">Parcel Delivery</button>
+                    <button class="tab-btn" data-tab="document">Document Delivery</button>
+                </div>
+                
+                <!-- Ride Search Form -->
+                <div class="search-form active" id="ride-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="from"><i class="fas fa-map-marker-alt"></i> From</label>
+                            <input type="text" id="from" placeholder="Enter pickup location" value="Karachi">
+                        </div>
+                        <div class="form-group">
+                            <label for="to"><i class="fas fa-map-marker-alt"></i> To</label>
+                            <input type="text" id="to" placeholder="Enter destination" value="Lahore">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date"><i class="fas fa-calendar-alt"></i> Date</label>
+                            <input type="date" id="date" value="2023-12-15">
+                        </div>
+                        <div class="form-group">
+                            <label for="passengers"><i class="fas fa-user-friends"></i> Passengers</label>
+                            <select id="passengers">
+                                <option value="1">1 Passenger</option>
+                                <option value="2">2 Passengers</option>
+                                <option value="3">3 Passengers</option>
+                                <option value="4">4 Passengers</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button class="btn btn-primary search-btn">
+                            <i class="fas fa-search"></i> Search Rides
+                        </button>
+                        <button class="btn btn-outline filter-btn">
+                            <i class="fas fa-filter"></i> Advanced Filters
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Parcel Delivery Form -->
+                <div class="search-form" id="parcel-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="parcel-from"><i class="fas fa-map-marker-alt"></i> Pickup Location</label>
+                            <input type="text" id="parcel-from" placeholder="Where to pickup from">
+                        </div>
+                        <div class="form-group">
+                            <label for="parcel-to"><i class="fas fa-map-marker-alt"></i> Delivery Location</label>
+                            <input type="text" id="parcel-to" placeholder="Where to deliver to">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="parcel-type"><i class="fas fa-box"></i> Parcel Type</label>
+                            <select id="parcel-type">
+                                <option value="small">Small (up to 5kg)</option>
+                                <option value="medium">Medium (5-15kg)</option>
+                                <option value="large">Large (15-30kg)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="delivery-date"><i class="fas fa-calendar-alt"></i> Delivery Date</label>
+                            <input type="date" id="delivery-date">
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button class="btn btn-primary search-btn">
+                            <i class="fas fa-search"></i> Find Delivery Options
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Document Delivery Form -->
+                <div class="search-form" id="document-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="doc-from"><i class="fas fa-map-marker-alt"></i> From</label>
+                            <input type="text" id="doc-from" placeholder="Document pickup location">
+                        </div>
+                        <div class="form-group">
+                            <label for="doc-to"><i class="fas fa-map-marker-alt"></i> To</label>
+                            <input type="text" id="doc-to" placeholder="Document delivery location">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="doc-type"><i class="fas fa-file-alt"></i> Document Type</label>
+                            <select id="doc-type">
+                                <option value="legal">Legal Documents</option>
+                                <option value="academic">Academic Documents</option>
+                                <option value="medical">Medical Reports</option>
+                                <option value="other">Other Documents</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="urgency"><i class="fas fa-clock"></i> Urgency</label>
+                            <select id="urgency">
+                                <option value="standard">Standard (3-5 days)</option>
+                                <option value="express">Express (1-2 days)</option>
+                                <option value="urgent">Urgent (Same day)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button class="btn btn-primary search-btn">
+                            <i class="fas fa-search"></i> Find Document Couriers
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-header">
+                <h2>Refine Your Search</h2>
+                <div class="filter-tags">
+                    <span class="filter-tag">Karachi to Lahore <i class="fas fa-times"></i></span>
+                    <span class="filter-tag">December 15 <i class="fas fa-times"></i></span>
+                    <span class="filter-tag">1 Passenger <i class="fas fa-times"></i></span>
+                    <a href="#" class="clear-all">Clear All</a>
+                </div>
+            </div>
+            
+            <div class="filters-grid">
+                <div class="filter-group">
+                    <h3><i class="fas fa-dollar-sign"></i> Price Range</h3>
+                    <div class="price-range">
+                        <input type="range" min="0" max="10000" value="5000" class="slider" id="price-slider">
+                        <div class="price-values">
+                            <span>PKR 0</span>
+                            <span>PKR 5,000</span>
+                            <span>PKR 10,000</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3><i class="fas fa-car"></i> Vehicle Type</h3>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <i class="fas fa-car"></i> Sedan
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <i class="fas fa-car-side"></i> SUV
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <i class="fas fa-truck-pickup"></i> Pickup
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <i class="fas fa-motorcycle"></i> Motorcycle
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3><i class="fas fa-star"></i> Driver Rating</h3>
+                    <div class="rating-filter">
+                        <label class="radio-label">
+                            <input type="radio" name="rating" checked>
+                            <span class="radiomark"></span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>4.5+</span>
+                            </div>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="rating">
+                            <span class="radiomark"></span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.0+</span>
+                            </div>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="rating">
+                            <span class="radiomark"></span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>3.0+</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3><i class="fas fa-clock"></i> Departure Time</h3>
+                    <div class="time-filters">
+                        <label class="checkbox-label">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            Morning (6AM - 12PM)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Afternoon (12PM - 6PM)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Evening (6PM - 12AM)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Night (12AM - 6AM)
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3><i class="fas fa-briefcase"></i> Services</h3>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <i class="fas fa-wifi"></i> Free WiFi
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <i class="fas fa-snowflake"></i> AC Available
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <i class="fas fa-suitcase"></i> Luggage Space
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <i class="fas fa-smoking-ban"></i> No Smoking
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3><i class="fas fa-user-check"></i> Verified Drivers</h3>
+                    <div class="switch-container">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider-switch"></span>
+                        </label>
+                        <span>Show verified drivers only</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+        <div class="container">
+            <div class="results-header">
+                <h2>Available Rides <span class="result-count">(12 rides found)</span></h2>
+                <div class="sort-options">
+                    <label>Sort by:</label>
+                    <select class="sort-select">
+                        <option value="recommended">Recommended</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="departure">Departure Time</option>
+                        <option value="rating">Highest Rated</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="rides-grid">
+                <!-- Ride Card 1 -->
+                <div class="ride-card">
+                    <div class="ride-header">
+                        <div class="driver-info">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Driver" class="driver-avatar">
+                            <div class="driver-details">
+                                <h3>Ahmed Raza</h3>
+                                <div class="driver-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.8</span>
+                                    <span class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>
+                                </div>
+                                <p class="driver-experience"><i class="fas fa-car"></i> 150+ trips</p>
+                            </div>
+                        </div>
+                        <div class="ride-price">
+                            <span class="price">PKR 2,500</span>
+                            <span class="per-person">per person</span>
+                        </div>
+                    </div>
+                    
+                    <div class="ride-details">
+                        <div class="route">
+                            <div class="route-point">
+                                <div class="point-icon start"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="point-details">
+                                    <h4>Karachi</h4>
+                                    <p>DHA Phase 5 • 8:00 AM</p>
+                                </div>
+                            </div>
+                            <div class="route-line"></div>
+                            <div class="route-point">
+                                <div class="point-icon end"><i class="fas fa-flag-checkered"></i></div>
+                                <div class="point-details">
+                                    <h4>Lahore</h4>
+                                    <p>Gulberg • 4:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="ride-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-car"></i>
+                                <span>Toyota Corolla</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-user-friends"></i>
+                                <span>2/4 seats available</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-suitcase"></i>
+                                <span>2 bags max</span>
+                            </div>
+                        </div>
+                        
+                        <div class="ride-features">
+                            <span class="feature-tag"><i class="fas fa-wifi"></i> Free WiFi</span>
+                            <span class="feature-tag"><i class="fas fa-snowflake"></i> AC</span>
+                            <span class="feature-tag"><i class="fas fa-smoking-ban"></i> No Smoking</span>
+                        </div>
+                    </div>
+                    
+                    <div class="ride-actions">
+                        <button class="btn btn-outline btn-small"><i class="fas fa-comment"></i> Message</button>
+                        <button class="btn btn-primary btn-small"><i class="fas fa-calendar-check"></i> Book Now</button>
+                    </div>
+                </div>
+                
+                <!-- Ride Card 2 -->
+                <div class="ride-card featured">
+                    <div class="featured-badge"><i class="fas fa-crown"></i> Recommended</div>
+                    <div class="ride-header">
+                        <div class="driver-info">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Driver" class="driver-avatar">
+                            <div class="driver-details">
+                                <h3>Sara Khan</h3>
+                                <div class="driver-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.9</span>
+                                    <span class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>
+                                </div>
+                                <p class="driver-experience"><i class="fas fa-car"></i> 200+ trips</p>
+                            </div>
+                        </div>
+                        <div class="ride-price">
+                            <span class="price">PKR 2,800</span>
+                            <span class="per-person">per person</span>
+                        </div>
+                    </div>
+                    
+                    <div class="ride-details">
+                        <div class="route">
+                            <div class="route-point">
+                                <div class="point-icon start"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="point-details">
+                                    <h4>Karachi</h4>
+                                    <p>Bahria Town • 9:00 AM</p>
+                                </div>
+                            </div>
+                            <div class="route-line"></div>
+                            <div class="route-point">
+                                <div class="point-icon end"><i class="fas fa-flag-checkered"></i></div>
+                                <div class="point-details">
+                                    <h4>Lahore</h4>
+                                    <p>DHA Phase 3 • 5:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="ride-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-car"></i>
+                                <span>Honda Civic</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-user-friends"></i>
+                                <span>3/4 seats available</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-suitcase"></i>
+                                <span>3 bags max</span>
+                            </div>
+                        </div>
+                        
+                        <div class="ride-features">
+                            <span class="feature-tag"><i class="fas fa-wifi"></i> Free WiFi</span>
+                            <span class="feature-tag"><i class="fas fa-snowflake"></i> AC</span>
+                            <span class="feature-tag"><i class="fas fa-utensils"></i> Snacks</span>
+                        </div>
+                    </div>
+                    
+                    <div class="ride-actions">
+                        <button class="btn btn-outline btn-small"><i class="fas fa-comment"></i> Message</button>
+                        <button class="btn btn-primary btn-small"><i class="fas fa-calendar-check"></i> Book Now</button>
+                    </div>
+                </div>
+                
+                <!-- Ride Card 3 -->
+                <div class="ride-card">
+                    <div class="ride-header">
+                        <div class="driver-info">
+                            <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Driver" class="driver-avatar">
+                            <div class="driver-details">
+                                <h3>Usman Ali</h3>
+                                <div class="driver-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.5</span>
+                                    <span class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>
+                                </div>
+                                <p class="driver-experience"><i class="fas fa-car"></i> 80+ trips</p>
+                            </div>
+                        </div>
+                        <div class="ride-price">
+                            <span class="price">PKR 2,200</span>
+                            <span class="per-person">per person</span>
+                        </div>
+                    </div>
+                    
+                    <div class="ride-details">
+                        <div class="route">
+                            <div class="route-point">
+                                <div class="point-icon start"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="point-details">
+                                    <h4>Karachi</h4>
+                                    <p>Clifton • 7:30 AM</p>
+                                </div>
+                            </div>
+                            <div class="route-line"></div>
+                            <div class="route-point">
+                                <div class="point-icon end"><i class="fas fa-flag-checkered"></i></div>
+                                <div class="point-details">
+                                    <h4>Lahore</h4>
+                                    <p>Model Town • 3:30 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="ride-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-car"></i>
+                                <span>Suzuki Cultus</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-user-friends"></i>
+                                <span>1/3 seats available</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-suitcase"></i>
+                                <span>1 bag max</span>
+                            </div>
+                        </div>
+                        
+                        <div class="ride-features">
+                            <span class="feature-tag"><i class="fas fa-snowflake"></i> AC</span>
+                            <span class="feature-tag"><i class="fas fa-music"></i> Music</span>
+                        </div>
+                    </div>
+                    
+                    <div class="ride-actions">
+                        <button class="btn btn-outline btn-small"><i class="fas fa-comment"></i> Message</button>
+                        <button class="btn btn-primary btn-small"><i class="fas fa-calendar-check"></i> Book Now</button>
+                    </div>
+                </div>
+                
+                <!-- Ride Card 4 -->
+                <div class="ride-card">
+                    <div class="ride-header">
+                        <div class="driver-info">
+                            <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Driver" class="driver-avatar">
+                            <div class="driver-details">
+                                <h3>Kamran Malik</h3>
+                                <div class="driver-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.7</span>
+                                </div>
+                                <p class="driver-experience"><i class="fas fa-car"></i> 120+ trips</p>
+                            </div>
+                        </div>
+                        <div class="ride-price">
+                            <span class="price">PKR 3,000</span>
+                            <span class="per-person">per person</span>
+                        </div>
+                    </div>
+                    
+                    <div class="ride-details">
+                        <div class="route">
+                            <div class="route-point">
+                                <div class="point-icon start"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="point-details">
+                                    <h4>Karachi</h4>
+                                    <p>North Nazimabad • 10:00 AM</p>
+                                </div>
+                            </div>
+                            <div class="route-line"></div>
+                            <div class="route-point">
+                                <div class="point-icon end"><i class="fas fa-flag-checkered"></i></div>
+                                <div class="point-details">
+                                    <h4>Lahore</h4>
+                                    <p>Johar Town • 6:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="ride-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-car"></i>
+                                <span>Toyota Fortuner</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-user-friends"></i>
+                                <span>4/7 seats available</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-suitcase"></i>
+                                <span>5 bags max</span>
+                            </div>
+                        </div>
+                        
+                        <div class="ride-features">
+                            <span class="feature-tag"><i class="fas fa-wifi"></i> Free WiFi</span>
+                            <span class="feature-tag"><i class="fas fa-snowflake"></i> AC</span>
+                            <span class="feature-tag"><i class="fas fa-tv"></i> Entertainment</span>
+                        </div>
+                    </div>
+                    
+                    <div class="ride-actions">
+                        <button class="btn btn-outline btn-small"><i class="fas fa-comment"></i> Message</button>
+                        <button class="btn btn-primary btn-small"><i class="fas fa-calendar-check"></i> Book Now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="load-more">
+                <button class="btn btn-outline">
+                    <i class="fas fa-redo"></i> Load More Rides
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map View Toggle -->
+    <div class="map-toggle">
+        <button class="btn btn-secondary map-toggle-btn">
+            <i class="fas fa-map-marked-alt"></i> Show Map View
+        </button>
+    </div>
+
+    <!-- Safety Tips -->
+    <section class="safety-tips">
+        <div class="container">
+            <h2><i class="fas fa-shield-alt"></i> Safety Tips for Riders</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Check Ratings</h3>
+                    <p>Always check driver ratings and reviews before booking a ride.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Share Trip Details</h3>
+                    <p>Share your ride details with friends or family members.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <h3>Cashless Payment</h3>
+                    <p>Use in-app payment methods for safer transactions.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Communicate Clearly</h3>
+                    <p>Confirm pickup location and time with the driver beforehand.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="logo">
+                    <i class="fas fa-car"></i>
+                    <h2>Safar<span>Share</span></h2>
+                </div>
+                <p>Connecting people traveling the same route, reducing expenses, and saving the environment.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="help.html">Help</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="find-ride.html">Find a Ride</a></li>
+                    <li><a href="post-ride.html">Post a Ride</a></li>
+                    <li><a href="#">Parcel Delivery</a></li>
+                    <li><a href="#">Document Delivery</a></li>
+                    <li><a href="#">Daily Commute</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</li>
+                    <li><i class="fas fa-phone"></i> +92 300 1234567</li>
+                    <li><i class="fas fa-envelope"></i> info@safarshare.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 SafarShare. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a> | 
+                <a href="#">Terms of Use</a> | 
+                <a href="#">Cookies Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="find_ride.js"></script>
+</body>
+</html>

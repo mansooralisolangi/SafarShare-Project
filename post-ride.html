@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Your Journey | SafarShare</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="post_ride.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+   <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-car"></i>
+                <h1>Safar<span>Share</span></h1>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li class="nav-item dropdown">
+                    <a href="services.html" class="nav-link"><i class="fas fa-concierge-bell"></i> Our Services <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="parcel_delivery.html"><i class="fas fa-shipping-fast"></i> Parcel Delivery</a>
+                        <a href="documents_delivery.html"><i class="fas fa-file-contract"></i> Document Delivery</a>
+                        <a href="shopping_delivery.html"><i class="fas fa-shopping-bag"></i> Shopping Delivery</a>
+                        <a href="carpool.html"><i class="fas fa-people-carry"></i> Carpool</a>
+                        <a href="daily_commute.html"><i class="fas fa-calendar-day"></i> Daily Commute</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="about_us.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                <li class="nav-item"><a href="helps.html" class="nav-link"><i class="fas fa-question-circle"></i> Help</a></li>
+            </ul>
+
+            <div class="auth-buttons">
+    <a href="login_and_sign_in.html" id="headerLogin" class="btn btn-outline">
+        <i class="fas fa-sign-in-alt"></i> Login
+    </a>
+    <!-- <a href="#" id="headerRegister" class="btn btn-primary">
+        <i class="fas fa-user-plus"></i> Register
+    </a> -->
+</div>
+<!-- <div class="auth-buttons">
+    <button id="headerLogin" class="btn btn-outline">
+        <i class="fas fa-sign-in-alt"></i> Login
+    </button>
+    <button id="headerRegister" class="btn btn-primary">
+        <i class="fas fa-user-plus"></i> Register
+    </button>
+</div> -->
+
+            
+            <!-- <div class="auth-buttons">
+                <a href="login_page.html" class="btn btn-outline"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="register_page.html" class="btn btn-primary"><i class="fas fa-user-plus"></i> Register</a>
+            </div> -->
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="post-ride-container">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1><i class="fas fa-road"></i> Post Your Journey</h1>
+                <p>Share your travel route and earn extra income by offering rides and delivery services</p>
+                <div class="progress-steps">
+                    <div class="step active">
+                        <div class="step-number">1</div>
+                        <span>Journey Details</span>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <span>Services & Pricing</span>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <span>Review & Post</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Journey Form -->
+        <section class="journey-form">
+            <div class="container">
+                <form id="postJourneyForm">
+                    <!-- Basic Information -->
+                    <div class="form-section">
+                        <h2><i class="fas fa-info-circle"></i> Basic Information</h2>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name"><i class="fas fa-user"></i> Full Name</label>
+                                <input type="text" id="name" placeholder="Enter your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+                                <input type="tel" id="phone" placeholder="+92 3XX XXXXXXX" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="vehicle"><i class="fas fa-car"></i> Vehicle Type</label>
+                                <select id="vehicle" required>
+                                    <option value="">Select Vehicle</option>
+                                    <option value="car">Car</option>
+                                    <option value="bike">Motorcycle</option>
+                                    <option value="suv">SUV</option>
+                                    <option value="van">Van</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="seats"><i class="fas fa-users"></i> Available Seats</label>
+                                <select id="seats" required>
+                                    <option value="">Select Seats</option>
+                                    <option value="1">1 Seat</option>
+                                    <option value="2">2 Seats</option>
+                                    <option value="3">3 Seats</option>
+                                    <option value="4">4 Seats</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Journey Details -->
+                    <div class="form-section">
+                        <h2><i class="fas fa-route"></i> Journey Details</h2>
+                        <div class="route-inputs">
+                            <div class="form-group">
+                                <label for="from"><i class="fas fa-map-marker-alt"></i> From (Starting Point)</label>
+                                <div class="input-with-icon">
+                                    <input type="text" id="from" placeholder="Enter starting location" required>
+                                    <button type="button" class="icon-btn" id="useCurrentLocation">
+                                        <i class="fas fa-location-arrow"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="to"><i class="fas fa-flag-checkered"></i> To (Destination)</label>
+                                <input type="text" id="to" placeholder="Enter destination" required>
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="date"><i class="fas fa-calendar-alt"></i> Journey Date</label>
+                                <input type="date" id="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time"><i class="fas fa-clock"></i> Departure Time</label>
+                                <input type="time" id="time" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="returnDate"><i class="fas fa-calendar-check"></i> Return Date (Optional)</label>
+                                <input type="date" id="returnDate">
+                            </div>
+                            <div class="form-group">
+                                <label for="returnTime"><i class="fas fa-clock"></i> Return Time (Optional)</label>
+                                <input type="time" id="returnTime">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Services Offered -->
+                    <div class="form-section">
+                        <h2><i class="fas fa-concierge-bell"></i> Services Offered</h2>
+                        <p class="section-description">Select the services you want to offer during your journey</p>
+                        
+                        <div class="services-checkboxes">
+                            <div class="service-option">
+                                <input type="checkbox" id="carpool" checked>
+                                <label for="carpool">
+                                    <div class="service-icon">
+                                        <i class="fas fa-people-carry"></i>
+                                    </div>
+                                    <div class="service-details">
+                                        <h3>Carpool</h3>
+                                        <p>Share your ride with passengers going the same way</p>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="service-option">
+                                <input type="checkbox" id="parcel">
+                                <label for="parcel">
+                                    <div class="service-icon">
+                                        <i class="fas fa-box"></i>
+                                    </div>
+                                    <div class="service-details">
+                                        <h3>Parcel Delivery</h3>
+                                        <p>Carry small to medium sized packages</p>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="service-option">
+                                <input type="checkbox" id="documents">
+                                <label for="documents">
+                                    <div class="service-icon">
+                                        <i class="fas fa-file-contract"></i>
+                                    </div>
+                                    <div class="service-details">
+                                        <h3>Document Delivery</h3>
+                                        <p>Carry important documents and letters</p>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="service-option">
+                                <input type="checkbox" id="shopping">
+                                <label for="shopping">
+                                    <div class="service-icon">
+                                        <i class="fas fa-shopping-bag"></i>
+                                    </div>
+                                    <div class="service-details">
+                                        <h3>Shopping Delivery</h3>
+                                        <p>Pick up and deliver shopping items</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pricing -->
+                    <div class="form-section">
+                        <h2><i class="fas fa-tags"></i> Pricing</h2>
+                        <div class="pricing-grid">
+                            <div class="price-card">
+                                <h3><i class="fas fa-user-friends"></i> Per Passenger</h3>
+                                <div class="price-input">
+                                    <span class="currency">Rs</span>
+                                    <input type="number" id="passengerPrice" placeholder="0" min="0">
+                                    <span class="unit">per person</span>
+                                </div>
+                                <p class="price-note">Price for one passenger</p>
+                            </div>
+                            
+                            <div class="price-card">
+                                <h3><i class="fas fa-box"></i> Small Parcel</h3>
+                                <div class="price-input">
+                                    <span class="currency">Rs</span>
+                                    <input type="number" id="smallParcelPrice" placeholder="0" min="0">
+                                    <span class="unit">per parcel</span>
+                                </div>
+                                <p class="price-note">Up to 5kg</p>
+                            </div>
+                            
+                            <div class="price-card">
+                                <h3><i class="fas fa-dolly"></i> Medium Parcel</h3>
+                                <div class="price-input">
+                                    <span class="currency">Rs</span>
+                                    <input type="number" id="mediumParcelPrice" placeholder="0" min="0">
+                                    <span class="unit">per parcel</span>
+                                </div>
+                                <p class="price-note">5-10kg</p>
+                            </div>
+                            
+                            <div class="price-card">
+                                <h3><i class="fas fa-truck-loading"></i> Documents</h3>
+                                <div class="price-input">
+                                    <span class="currency">Rs</span>
+                                    <input type="number" id="documentsPrice" placeholder="0" min="0">
+                                    <span class="unit">per envelope</span>
+                                </div>
+                                <p class="price-note">Important documents</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Information -->
+                    <div class="form-section">
+                        <h2><i class="fas fa-edit"></i> Additional Information</h2>
+                        <div class="form-group">
+                            <label for="description"><i class="fas fa-align-left"></i> Journey Description</label>
+                            <textarea id="description" rows="4" placeholder="Describe your journey, vehicle condition, any special instructions..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="rules"><i class="fas fa-gavel"></i> Rules & Conditions</label>
+                            <textarea id="rules" rows="3" placeholder="Any rules for passengers or delivery items..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="payment"><i class="fas fa-money-check-alt"></i> Payment Method</label>
+                            <div class="payment-options">
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="cash" checked>
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span>Cash</span>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="easypaisa">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>EasyPaisa</span>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="jazzcash">
+                                    <i class="fas fa-credit-card"></i>
+                                    <span>JazzCash</span>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="bank">
+                                    <i class="fas fa-university"></i>
+                                    <span>Bank Transfer</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Actions -->
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-outline btn-large" id="previewBtn">
+                            <i class="fas fa-eye"></i> Preview Journey
+                        </button>
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i> Post Journey
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Preview Modal -->
+        <div class="preview-modal" id="previewModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2><i class="fas fa-eye"></i> Journey Preview</h2>
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="modal-body" id="previewContent">
+                    <!-- Preview content will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="logo">
+                    <i class="fas fa-car"></i>
+                    <h2>Safar<span>Share</span></h2>
+                </div>
+                <p>Connecting people traveling the same route, reducing expenses, and saving the environment.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="help.html">Help</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Carpool</a></li>
+                    <li><a href="#">Parcel Delivery</a></li>
+                    <li><a href="#">Document Delivery</a></li>
+                    <li><a href="#">Shopping Delivery</a></li>
+                    <li><a href="#">Daily Commute</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</li>
+                    <li><i class="fas fa-phone"></i> +92 3225844067</li>
+                    <li><i class="fas fa-envelope"></i> info@safarshare.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 SafarShare. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a> | 
+                <a href="#">Terms of Use</a> | 
+                <a href="#">Cookies Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="post_ride.js"></script>
+</body>
+</html>

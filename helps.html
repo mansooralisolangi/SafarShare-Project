@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center - SafarShare</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="helps.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+  <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-car"></i>
+                <h1>Safar<span>Share</span></h1>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li class="nav-item dropdown">
+                    <a href="services.html" class="nav-link"><i class="fas fa-concierge-bell"></i> Our Services <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="parcel_delivery.html"><i class="fas fa-shipping-fast"></i> Parcel Delivery</a>
+                        <a href="documents_delivery.html"><i class="fas fa-file-contract"></i> Document Delivery</a>
+                        <a href="shopping_delivery.html"><i class="fas fa-shopping-bag"></i> Shopping Delivery</a>
+                        <a href="carpool.html"><i class="fas fa-people-carry"></i> Carpool</a>
+                        <a href="daily_commute.html"><i class="fas fa-calendar-day"></i> Daily Commute</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="about_us.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                <li class="nav-item"><a href="helps.html" class="nav-link"><i class="fas fa-question-circle"></i> Help</a></li>
+            </ul>
+
+            <div class="auth-buttons">
+    <a href="login_and_sign_in.html" id="headerLogin" class="btn btn-outline">
+        <i class="fas fa-sign-in-alt"></i> Login
+    </a>
+    <!-- <a href="#" id="headerRegister" class="btn btn-primary">
+        <i class="fas fa-user-plus"></i> Register
+    </a> -->
+</div>
+<!-- <div class="auth-buttons">
+    <button id="headerLogin" class="btn btn-outline">
+        <i class="fas fa-sign-in-alt"></i> Login
+    </button>
+    <button id="headerRegister" class="btn btn-primary">
+        <i class="fas fa-user-plus"></i> Register
+    </button>
+</div> -->
+
+            
+            <!-- <div class="auth-buttons">
+                <a href="login_page.html" class="btn btn-outline"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="register_page.html" class="btn btn-primary"><i class="fas fa-user-plus"></i> Register</a>
+            </div> -->
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Help Hero Section -->
+    <section class="help-hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-hands-helping"></i>
+                    <span>We're Here to Help</span>
+                </div>
+                <h1 class="hero-title">How Can We <span class="green-text">Help You</span> Today?</h1>
+                <p class="hero-subtitle">Find answers to common questions, learn how to use SafarShare, and get the support you need for a seamless experience.</p>
+                
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="helpSearch" placeholder="Search for help articles, FAQs, or topics...">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="quick-links">
+                    <a href="#faq" class="quick-link">
+                        <i class="fas fa-question-circle"></i>
+                        <span>FAQs</span>
+                    </a>
+                    <a href="#safety" class="quick-link">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Safety Guide</span>
+                    </a>
+                    <a href="#payments" class="quick-link">
+                        <i class="fas fa-credit-card"></i>
+                        <span>Payments</span>
+                    </a>
+                    <a href="#account" class="quick-link">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Account Help</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Help and Support">
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="help-categories">
+        <div class="container">
+            <h2 class="section-title">Browse Help <span class="green-text">Categories</span></h2>
+            <p class="section-subtitle">Find answers organized by topics</p>
+            
+            <div class="categories-grid">
+                <div class="category-card" data-category="getting-started">
+                    <div class="category-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Getting Started</h3>
+                    <p>Learn how to create an account, set up your profile, and make your first booking.</p>
+                    <a href="#" class="category-link">View Articles <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="category-card" data-category="booking">
+                    <div class="category-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Booking Rides</h3>
+                    <p>How to find rides, book seats, and manage your bookings.</p>
+                    <a href="#" class="category-link">View Articles <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="category-card" data-category="payments">
+                    <div class="category-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Payments & Pricing</h3>
+                    <p>Information about pricing, payment methods, and refunds.</p>
+                    <a href="#" class="category-link">View Articles <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="category-card" data-category="safety">
+                    <div class="category-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Safety & Security</h3>
+                    <p>Safety guidelines, emergency procedures, and trust building.</p>
+                    <a href="#" class="category-link">View Articles <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="category-card" data-category="account">
+                    <div class="category-icon">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <h3>Account Management</h3>
+                    <p>Manage your profile, settings, and privacy options.</p>
+                    <a href="#" class="category-link">View Articles <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="category-card" data-category="driver">
+                    <div class="category-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>For Drivers</h3>
+                    <p>How to offer rides, manage trips, and earn with SafarShare.</p>
+                    <a href="#" class="category-link">View Articles <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Articles -->
+    <section class="popular-articles">
+        <div class="container">
+            <h2 class="section-title">Most <span class="green-text">Popular Articles</span></h2>
+            <p class="section-subtitle">Questions our users ask most frequently</p>
+            
+            <div class="articles-grid">
+                <div class="article-card">
+                    <div class="article-header">
+                        <span class="article-category">Getting Started</span>
+                        <span class="article-read-time"><i class="fas fa-clock"></i> 3 min read</span>
+                    </div>
+                    <h3>How do I create a SafarShare account?</h3>
+                    <p>Step-by-step guide to creating your account and setting up your profile for the best experience.</p>
+                    <a href="#" class="article-link">Read Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="article-card">
+                    <div class="article-header">
+                        <span class="article-category">Booking</span>
+                        <span class="article-read-time"><i class="fas fa-clock"></i> 4 min read</span>
+                    </div>
+                    <h3>How to find and book a ride?</h3>
+                    <p>Learn how to search for available rides, compare options, and secure your seat.</p>
+                    <a href="#" class="article-link">Read Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="article-card">
+                    <div class="article-header">
+                        <span class="article-category">Payments</span>
+                        <span class="article-read-time"><i class="fas fa-clock"></i> 5 min read</span>
+                    </div>
+                    <h3>What payment methods are accepted?</h3>
+                    <p>Information about cash payments, mobile wallets, and online payment options.</p>
+                    <a href="#" class="article-link">Read Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="article-card">
+                    <div class="article-header">
+                        <span class="article-category">Safety</span>
+                        <span class="article-read-time"><i class="fas fa-clock"></i> 6 min read</span>
+                    </div>
+                    <h3>Safety guidelines for riders and drivers</h3>
+                    <p>Essential safety tips and precautions for a secure journey with SafarShare.</p>
+                    <a href="#" class="article-link">Read Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked <span class="green-text">Questions</span></h2>
+            <p class="section-subtitle">Quick answers to common questions</p>
+            
+            <div class="faq-container">
+                <div class="faq-category">
+                    <h3><i class="fas fa-user-plus"></i> Account & Registration</h3>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>Is it free to create a SafarShare account?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Yes! Creating an account on SafarShare is completely free. You only pay for the rides you book or the services you use.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>What information do I need to register?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>You need a valid phone number, email address, and some basic personal information. For drivers, we require additional verification including driver's license and vehicle documents.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>Can I have both rider and driver accounts?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Absolutely! One account can be used for both riding and driving. You can switch between modes based on your needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-category">
+                    <h3><i class="fas fa-car"></i> Booking & Rides</h3>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>How do I find rides on my route?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Enter your pickup and drop-off locations in the search bar. SafarShare will show you all available rides matching your route along with prices and driver ratings.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>Can I book a ride in advance?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Yes, you can book rides up to 7 days in advance. This is especially useful for planned trips and daily commutes.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>What if I need to cancel my booking?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>You can cancel your booking through the app or website. Cancellation policies vary based on timing - check the specific ride details for cancellation terms.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-category">
+                    <h3><i class="fas fa-money-bill-wave"></i> Payments & Pricing</h3>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>How is the fare calculated?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Fares are calculated based on distance, time, demand, and vehicle type. You'll see the exact fare before confirming your booking.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>What payment methods are accepted?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>We accept cash payments, mobile wallets (JazzCash, EasyPaisa), and credit/debit cards for online payments.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>Is there a commission fee?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>SafarShare charges a small service fee (10-15%) from drivers for each completed ride. This helps us maintain and improve our platform.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-category">
+                    <h3><i class="fas fa-shield-alt"></i> Safety & Security</h3>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>How does SafarShare ensure safety?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>We verify all users, provide emergency contact features, allow ride tracking, and have a 24/7 support team. All drivers undergo background checks.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>What should I do in case of emergency?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Use the emergency button in the app to alert authorities and SafarShare support. Always share your ride details with trusted contacts.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>How are drivers verified?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Drivers must submit valid driver's license, vehicle registration, insurance, and pass a background check before they can offer rides.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Guide -->
+    <section class="safety-guide" id="safety">
+        <div class="container">
+            <div class="safety-header">
+                <h2 class="section-title">Your <span class="green-text">Safety Guide</span></h2>
+                <p class="section-subtitle">Important safety tips for riders and drivers</p>
+            </div>
+            
+            <div class="safety-grid">
+                <div class="safety-card">
+                    <div class="safety-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Verify Before You Travel</h3>
+                    <ul>
+                        <li>Check driver ratings and reviews</li>
+                        <li>Verify vehicle details match the app</li>
+                        <li>Confirm the driver knows your name</li>
+                    </ul>
+                </div>
+                
+                <div class="safety-card">
+                    <div class="safety-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>Share Your Trip</h3>
+                    <ul>
+                        <li>Share ride details with family/friends</li>
+                        <li>Use the in-app sharing feature</li>
+                        <li>Keep someone updated on your location</li>
+                    </ul>
+                </div>
+                
+                <div class="safety-card">
+                    <div class="safety-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Stay Connected</h3>
+                    <ul>
+                        <li>Keep your phone charged</li>
+                        <li>Save emergency contacts</li>
+                        <li>Use in-app messaging for communication</li>
+                    </ul>
+                </div>
+                
+                <div class="safety-card">
+                    <div class="safety-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>Trust Your Instincts</h3>
+                    <ul>
+                        <li>Cancel if something feels wrong</li>
+                        <li>Report suspicious behavior</li>
+                        <li>Choose well-lit pickup/drop points</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Support -->
+    <section class="contact-support">
+        <div class="container">
+            <div class="support-wrapper">
+                <div class="support-content">
+                    <h2 class="section-title">Still Need <span class="green-text">Help?</span></h2>
+                    <p class="section-subtitle">Our support team is ready to assist you</p>
+                    
+                    <div class="support-options">
+                        <div class="support-option">
+                            <div class="option-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="option-content">
+                                <h3>Live Chat</h3>
+                                <p>Chat with our support agents in real-time</p>
+                                <button class="btn btn-outline start-chat">
+                                    <i class="fas fa-comment-dots"></i> Start Chat
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="support-option">
+                            <div class="option-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="option-content">
+                                <h3>Email Support</h3>
+                                <p>Get help via email within 24 hours</p>
+                                <a href="mailto:support@safarshare.com" class="btn btn-outline">
+                                    <i class="fas fa-paper-plane"></i> Send Email
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="support-option">
+                            <div class="option-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="option-content">
+                                <h3>Phone Support</h3>
+                                <p>Call us for urgent assistance</p>
+                                <a href="tel:+923225844067" class="btn btn-outline">
+                                    <i class="fas fa-phone"></i> Call Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="support-form">
+                    <h3>Submit a Support Request</h3>
+                    <form id="supportForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="category">Issue Category</label>
+                            <select id="category" required>
+                                <option value="">Select category</option>
+                                <option value="booking">Booking Issue</option>
+                                <option value="payment">Payment Issue</option>
+                                <option value="account">Account Issue</option>
+                                <option value="safety">Safety Concern</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Describe Your Issue</label>
+                            <textarea id="message" rows="4" required placeholder="Please provide details about your issue..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Submit Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Widget (Hidden by default) -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header">
+            <h4><i class="fas fa-comments"></i> SafarShare Support</h4>
+            <button class="chat-close" id="closeChat">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chat-body">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    <div class="message-content">
+                        <p>Hello! I'm SafarShare Assistant. How can I help you today?</p>
+                    </div>
+                    <span class="message-time">Just now</span>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Type your message...">
+                <button id="sendMessage">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="logo">
+                    <i class="fas fa-car"></i>
+                    <h2>Safar<span>Share</span></h2>
+                </div>
+                <p>Connecting people traveling the same route, reducing expenses, and saving the environment.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="help.html">Help</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="carpool.html">Carpool</a></li>
+                    <li><a href="parcel_delivery.html">Parcel Delivery</a></li>
+                    <li><a href="documents_delivery.html">Document Delivery</a></li>
+                    <li><a href="shopping_delivery.html">Shopping Delivery</a></li>
+                    <li><a href="daily_commute.html">Daily Commute</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</li>
+                    <li><i class="fas fa-phone"></i> +92 3225844067</li>
+                    <li><i class="fas fa-envelope"></i> info@safarshare.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 SafarShare. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a> | 
+                <a href="#">Terms of Use</a> | 
+                <a href="#">Cookies Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="helps.js"></script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Login & Sign Up</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+    :root {
+    /* Green Theme Colors */
+    --primary-green: #156349;
+    --green-dark: #0d5038;
+    --green-light: #156349;
+    --green-lighter: #d4edda;
+    --green-bright: #156349;
+    --pure-white: #ffffff;
+    --off-white: #f8f9fa;
+    --light-white: #e9ecef;
+    --text-dark: #212529;
+    --text-gray: #6c757d;
+    --shadow-sm: 0 2px 4px rgba(21, 99, 73, 0.1);
+    --shadow-md: 0 4px 8px rgba(21, 99, 73, 0.15);
+    --shadow-lg: 0 8px 16px rgba(21, 99, 73, 0.2);
+    --shadow-xl: 0 12px 24px rgba(21, 99, 73, 0.25);
+    --border-light: 2px solid var(--green-lighter);
+    --border-medium: 2px solid var(--primary-green);
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --transition: all 0.3s ease;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg, var(--primary-green), var(--green-dark));
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:900px;
+    background:#fff;
+    border-radius:24px;
+    position:relative;
+    overflow:hidden;
+    min-height:600px;
+    box-shadow:0 20px 40px rgba(49, 161, 14, 0.08);
+}
+
+/* ===== TOGGLE ===== */
+#toggle{ display:none; }
+
+/* ===== WELCOME ===== */
+.welcome-section{
+    position:absolute;
+    width:50%;
+    height:100%;
+    left:0;
+    top:0;
+    background: linear-gradient(135deg, var(--primary-green), var(--green-dark));
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px;
+    transition:.8s ease-in-out;
+    z-index:2;
+}
+
+.logo{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.welcome-btn{
+    margin-top:25px;
+    padding:14px 36px;
+    border-radius:50px;
+    border:2px solid rgba(255,255,255,.5);
+    background:transparent;
+    color:#fff;
+    font-weight:600;
+    cursor:pointer;
+}
+
+/* ===== FORMS ===== */
+.forms-container{
+    position:absolute;
+    width:50%;
+    height:100%;
+    right:0;
+    top:0;
+    overflow:hidden;
+    transition:.8s ease-in-out;
+}
+
+.form-wrapper{
+    width:200%;
+    height:100%;
+    display:flex;
+    transition:.8s ease-in-out;
+}
+
+.form{
+    width:50%;
+    padding:60px;
+}
+
+.form h2{
+    margin-bottom:20px;
+}
+
+.form-group{
+    margin-bottom:20px;
+    position:relative;
+}
+
+.form-group i{
+    position:absolute;
+    left:14px;
+    top:14px;
+    color:#aaa;
+}
+
+.form-control{
+    width:100%;
+    padding:14px 14px 14px 44px;
+    border-radius:10px;
+    border:2px solid #eee;
+}
+
+.btn{
+    width:100%;
+    padding:15px;
+    background: linear-gradient(135deg, var(--primary-green), var(--green-dark));
+    border:none;
+    border-radius:12px;
+    color:#fff;
+    font-weight:600;
+    cursor:pointer;
+}
+
+/* ===== LINKS ===== */
+.toggle-link{
+    color:#156349;
+    cursor:pointer;
+    font-weight:600;
+}
+
+/* ===== TOGGLE ANIMATION ===== */
+#toggle:checked ~ .welcome-section{
+    transform:translateX(100%);
+}
+
+#toggle:checked ~ .forms-container{
+    transform:translateX(-100%);
+}
+
+#toggle:checked ~ .forms-container .form-wrapper{
+    transform:translateX(-50%);
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+    .welcome-section{
+        width:100%;
+        height:35%;
+    }
+    .forms-container{
+        width:100%;
+        height:65%;
+        top:35%;
+        right:0;
+    }
+    .form-wrapper{
+        flex-direction:column;
+        width:100%;
+        height:200%;
+    }
+    .form{
+        width:100%;
+        height:50%;
+        padding:30px;
+    }
+    #toggle:checked ~ .forms-container .form-wrapper{
+        transform:translateY(-50%);
+    }
+}
+
+/* ===== FOOTER ===== */
+.footer{
+    text-align:center;
+    margin-top:20px;
+    color:#777;
+    font-size:.9rem;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<input type="checkbox" id="toggle">
+
+<div class="welcome-section">
+    <div class="logo"><i class="fas fa-user-circle"></i></div>
+    <h1 id="welcomeTitle">Welcome Back!</h1>
+    <p id="welcomeText">Login to access your account.</p>
+    <label for="toggle" class="welcome-btn" id="welcomeBtn">Sign Up</label>
+</div>
+
+<div class="forms-container">
+<div class="form-wrapper">
+
+<!-- LOGIN -->
+<div class="form">
+    <h2>Login</h2>
+    <div class="form-group">
+        <i class="fas fa-envelope"></i>
+        <input class="form-control" placeholder="Email">
+    </div>
+    <div class="form-group">
+        <i class="fas fa-lock"></i>
+        <input class="form-control" placeholder="Password">
+    </div>
+    <button class="btn">Login</button>
+    <p>Don't have an account? <label for="toggle" class="toggle-link">Sign Up</label></p>
+</div>
+
+<!-- SIGNUP -->
+<div class="form">
+    <h2>Sign Up</h2>
+    <div class="form-group">
+        <i class="fas fa-user"></i>
+        <input class="form-control" placeholder="Full Name">
+    </div>
+    <div class="form-group">
+        <i class="fas fa-envelope"></i>
+        <input class="form-control" placeholder="Email">
+    </div>
+    <div class="form-group">
+        <i class="fas fa-lock"></i>
+        <input class="form-control" placeholder="Password">
+    </div>
+
+    <div class="form-group">
+        <i class="fas fa-lock"></i>
+        <input class="form-control" placeholder="Confirm Password">
+    </div>
+    <button class="btn">Create Account</button>
+    <p>Already have an account? <label for="toggle" class="toggle-link">Login</label></p>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<script>
+const toggle = document.getElementById("toggle");
+const title = document.getElementById("welcomeTitle");
+const text = document.getElementById("welcomeText");
+const btn  = document.getElementById("welcomeBtn");
+
+function updateUI(){
+    if(toggle.checked){
+        title.innerText="Hello Friend!";
+        text.innerText="Create an account to get started.";
+        btn.innerText="Login";
+    }else{
+        title.innerText="Welcome Back!";
+        text.innerText="Login to access your account.";
+        btn.innerText="Sign Up";
+    }
+}
+
+toggle.addEventListener("change",updateUI);
+updateUI();
+
+</script>
+<!-- <script src="login_and_sign_in.js"></script> -->
+</body>
+</html>
