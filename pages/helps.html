@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Help Center - SafarShare</title>
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="helps.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/helps.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header Section -->
   <header class="header">
         <nav class="navbar">
             <div class="logo">
@@ -19,44 +18,31 @@
             </div>
             
             <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
-                <li class="nav-item dropdown">
-                    <a href="services.html" class="nav-link"><i class="fas fa-concierge-bell"></i> Our Services <i class="fas fa-caret-down"></i></a>
-                    <div class="dropdown-content">
-                        <a href="parcel_delivery.html"><i class="fas fa-shipping-fast"></i> Parcel Delivery</a>
-                        <a href="documents_delivery.html"><i class="fas fa-file-contract"></i> Document Delivery</a>
-                        <a href="shopping_delivery.html"><i class="fas fa-shopping-bag"></i> Shopping Delivery</a>
-                        <a href="carpool.html"><i class="fas fa-people-carry"></i> Carpool</a>
-                        <a href="daily_commute.html"><i class="fas fa-calendar-day"></i> Daily Commute</a>
-                    </div>
-                </li>
-                <li class="nav-item"><a href="about_us.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link"><i class="fas fa-phone-alt"></i> Contact</a></li>
-                <li class="nav-item"><a href="helps.html" class="nav-link"><i class="fas fa-question-circle"></i> Help</a></li>
-            </ul>
+    <li class="nav-item"><a href="../index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+    <li class="nav-item dropdown">
+        <button class="nav-link dropdown-btn" type="button">
+            <i class="fas fa-concierge-bell"></i> Our Services 
+            <i class="fas fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="../pages/about_us.html"><i class="fas fa-shipping-fast"></i> Parcel Delivery</a>
+            <a href="../pages/documents_delivery.html"><i class="fas fa-file-contract"></i> Document Delivery</a>
+            <a href="../pages/shopping_delivery.html"><i class="fas fa-shopping-bag"></i> Shopping Delivery</a>
+            <a href="../pages/carpool.html"><i class="fas fa-people-carry"></i> Carpool</a>
+            <a href="../pages/daily_commute.html"><i class="fas fa-calendar-day"></i> Daily Commute</a>
+        </div>
+    </li>
+    <li class="nav-item"><a href="../pages/about_us.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a></li>
+    <li class="nav-item"><a href="../pages/contact.html" class="nav-link"><i class="fas fa-phone-alt"></i> Contact</a></li>
+    <li class="nav-item"><a href="../pages/helps.html" class="nav-link"><i class="fas fa-question-circle"></i> Help</a></li>
+</ul>
 
             <div class="auth-buttons">
-    <a href="login_and_sign_in.html" id="headerLogin" class="btn btn-outline">
+    <a href="../pages/login_and_sign_in.html" id="headerLogin" class="btn btn-outline">
         <i class="fas fa-sign-in-alt"></i> Login
     </a>
-    <!-- <a href="#" id="headerRegister" class="btn btn-primary">
-        <i class="fas fa-user-plus"></i> Register
-    </a> -->
 </div>
-<!-- <div class="auth-buttons">
-    <button id="headerLogin" class="btn btn-outline">
-        <i class="fas fa-sign-in-alt"></i> Login
-    </button>
-    <button id="headerRegister" class="btn btn-primary">
-        <i class="fas fa-user-plus"></i> Register
-    </button>
-</div> -->
 
-            
-            <!-- <div class="auth-buttons">
-                <a href="login_page.html" class="btn btn-outline"><i class="fas fa-sign-in-alt"></i> Login</a>
-                <a href="register_page.html" class="btn btn-primary"><i class="fas fa-user-plus"></i> Register</a>
-            </div> -->
             
             <div class="hamburger">
                 <span class="bar"></span>
@@ -74,7 +60,7 @@
                     <i class="fas fa-hands-helping"></i>
                     <span>We're Here to Help</span>
                 </div>
-                <h1 class="hero-title">How Can We <span class="green-text">Help You</span> Today?</h1>
+                <h1 class="hero-title">How Can We <span class="hero-title">Help You</span> Today?</h1>
                 <p class="hero-subtitle">Find answers to common questions, learn how to use SafarShare, and get the support you need for a seamless experience.</p>
                 
                 <div class="search-container">
@@ -552,7 +538,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
+   <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
                 <div class="logo">
@@ -571,22 +557,22 @@
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Our Services</a></li>
-                    <li><a href="about_us.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="help.html">Help</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="pages/parcel_delivery.html">Our Services</a></li>
+                    <li><a href="pages/about.html">About Us</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                    <li><a href="pages/help.html">Help</a></li>
                 </ul>
             </div>
             
             <div class="footer-section">
                 <h3>Services</h3>
                 <ul>
-                    <li><a href="carpool.html">Carpool</a></li>
-                    <li><a href="parcel_delivery.html">Parcel Delivery</a></li>
-                    <li><a href="documents_delivery.html">Document Delivery</a></li>
-                    <li><a href="shopping_delivery.html">Shopping Delivery</a></li>
-                    <li><a href="daily_commute.html">Daily Commute</a></li>
+                    <li><a href="../pages/carpool.html">Carpool</a></li>
+                    <li><a href="../pages/parcel_delivery.html">Parcel Delivery</a></li>
+                    <li><a href="../pages/documents_delivery.html">Document Delivery</a></li>
+                    <li><a href="../pages/shopping_delivery.html">Shopping Delivery</a></li>
+                    <li><a href="../pages/daily_commute.html">Daily Commute</a></li>
                 </ul>
             </div>
             
@@ -610,6 +596,6 @@
         </div>
     </footer>
 
-    <script src="helps.js"></script>
+    <script src="../js/helps.js"></script>
 </body>
 </html>

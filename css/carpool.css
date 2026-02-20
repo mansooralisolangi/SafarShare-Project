@@ -18,6 +18,7 @@
     --transition: all 0.3s ease;
 }
 
+
 /* Service Hero */
 .service-hero {
     background: linear-gradient(135deg, var(--primary), var(--primary-dark));
@@ -711,16 +712,8 @@
     margin-right: auto;
 }
 
-.btn-outline {
-    background: transparent;
-    color: var(--white);
-    border: 2px solid var(--white);
-}
 
-.btn-outline:hover {
-    background: var(--white);
-    color: var(--primary);
-}
+
 
 /* Responsive Design */
 @media (max-width: 992px) {
